@@ -1,0 +1,111 @@
+.data-fetch-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.input-container input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e5e5e5ff;
+    color: black;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px #e5e5e5ff;
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+.input-container button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+.input-container button:active {
+    transform: scale(0.98);
+}
+
+.user-list-container {
+    background-color: #fca311ff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-container h2 {
+    margin-top: 0;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.user-item {
+    background-color: #fca311ff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.user-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.user-item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.user-item p strong {
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 100%;
+    }
+}

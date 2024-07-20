@@ -1,28 +1,28 @@
-import { useState } from 'react'
-import FunCompOne from './FunCompOne';
-import FunCompTwo from './FunCompTwo';
 
+import FunCompOne from './FunCompOne'
+import FunCompTwo from './FunCompTwo'
+import { useState } from 'react'
 
 const ToggleFunc = () => {
-    
 
-    const [funcOne, setfuncOne] = useState(false);
-    console.log(funcOne);
-    const [funcTwo, setfuncTwo] = useState(false);
+    const [funcOne,setfunOne] = useState(false);
+    const [funcTwo,setfunTwo] = useState(false);
 
-    return (
-        <div className='click'>
-            <button onClick={() => setfuncOne(!funcOne)}>First Functional Component </button>
-            <button onClick={() => setfuncTwo(!funcTwo)}>Second Function Component </button>
-
-            <div className='subcontainer'>
-
-            {funcOne ? <FunCompOne /> : null}
-            {funcTwo ? <FunCompTwo /> : null}
-              </div> 
-            
+  return (
+    <>
+    <h1>Functional Components</h1>
+    <div className="toggle-container">
+            <div className="button-container">
+        <button onClick={()=>setfunOne(!funcOne)}>First Functional Component</button>
+        <button onClick={()=>setfunTwo(!funcTwo)}>Second Functional Component</button>
         </div>
-    );
-};
+        <div className="component-container">
+        {funcOne ? <FunCompOne/> : null}
+        {funcTwo? <FunCompTwo/> : null}
+    </div>
+    </div>
+    </>
+  )
+}
 
-export default ToggleFunc;
+export default ToggleFunc
